@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:paddingEnd="16dp"
+    android:paddingStart="16dp"
+    android:paddingTop="8dp">
+    
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_enter_text"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:hint="Enter Text">
+        
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_enter_text"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"/>
+        
+    
+    </com.google.android.material.textfield.TextInputLayout>
+    
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_cipher"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_width="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/til_enter_text"
+        android:hint="Cipher"
+        app:placeholderText="Cipher will appear here">
+        
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_cipher"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"/>
+        
+    
+    </com.google.android.material.textfield.TextInputLayout>
+    
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_salt"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_width="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/til_cipher"
+        android:hint="Salt"
+        app:placeholderText="Encryption key will appear here">
+        
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_salt"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"/>
+        
+    
+    </com.google.android.material.textfield.TextInputLayout>
+    
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/materialbutton1"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_width="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/til_salt"
+        android:text="Encrypt"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        app:backgroundTint="@color/purple_500"
+        app:cornerRadius="8dp"/>
+    
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/materialbutton2"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_width="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialbutton1"
+        android:text="Decrypt"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        app:backgroundTint="@color/purple_500"
+        app:cornerRadius="8dp"/>
+    
+
+</androidx.constraintlayout.widget.ConstraintLayout>
